@@ -1,0 +1,210 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        #search {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #header-buttons {
+            margin-top: 15px;
+        }
+
+        #report-btn, #reward-info {
+            background: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        #reward-info {
+            background: green;
+        }
+
+        /* AI Tools Carousel */
+        .carousel-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            animation: slide 10s infinite linear;
+        }
+
+        .card {
+            min-width: 300px;
+            background: #627d98;
+            border: 1px solid #d72e2e;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            background-color:black;
+            color:white;
+        }
+
+        /* Career Path Carousel */
+        .career-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            animation: slide 12s infinite linear;
+        }
+        footer {
+        background-color: #0e4b8b;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        position:;
+        bottom: 0;
+        width: 100%;
+    }
+
+        .career-card {
+            min-width: 300px;
+            background: #6092c8;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Job Listings */
+        #job-listings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            display:inline-block;
+            background-color: #e9eef4;
+        }
+
+        .job-card {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 300px;
+            margin: 10px;
+            border-radius: 5px;
+            color:black;
+            background-color:skyblue;
+        }
+
+        .job-card:hover {
+            background: #e2e6ea;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        /* Report Form */
+        #report-area {
+            display: none;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+.button{
+    background-color: #f1e9f4;
+    border-radius: 10px;
+    border-width: 5px;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background:linear-gradient(rgb(204, 204, 219),white);
+    
+}
+        #report-area textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+        }
+
+        #submit-report, #close-report {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #submit-report {
+            background: red;
+            color: white;
+        }
+
+        #close-report {
+            background: gray;
+            color: white;
+        }
+
+        /* Form styling */
+        .form-container {
+            display: none;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-container button:hover {
+            background: #0056b3;
+        }
+
+        /* Animation */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-600px); }
+        }

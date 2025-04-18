@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <link rel="stylesheet" href="y.css">
+</head>
+<body>
+
+<header>
+    <h1>Job Seeker</h1>
+    <input type="text" id="search" placeholder="Search jobs, countries, or states..." onkeyup="searchJobs()">
+    <div id="header-buttons">
+        <button id="report-btn" onclick="openReportArea()">Report Job Issue</button>
+        <button id="reward-info" onclick="showRewards()">View Rewards</button>
+        <!-- Login and Sign Up buttons -->
+        <button onclick="openLoginForm()" class="button">Login</button>
+        <button onclick="openSignUpForm()" class="button">Sign Up</button>
+    </div>
+</header>
+
+<!-- Login Form -->
+<div id="login-form" class="form-container">
+    <h2>Login</h2>
+    <input type="text" id="login-username" placeholder="Username">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="submitLogin()">Login</button>
+</div>
+
+<!-- Sign-Up Form -->
+<div id="sign-up-form" class="form-container">
+    <h2>Sign Up</h2>
+    <input type="text" id="sign-up-username" placeholder="First Name">
+    <input type="text" id="sign-up-username" placeholder="last Name">
+    <input type="email" id="sign-up-email" placeholder="Email">
+    <input type="password" id="sign-up-password" placeholder="Password">
+    <button onclick="submitSignUp()">Sign Up</button>
+</div>
+
+<!-- AI Tools Carousel -->
+<h2>AI Tools Recommendations</h2>
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="card"><h2>Grammarly</h2><p>AI-powered grammar corrections.</p></div>
+        <div class="card"><h2>Gamma AI</h2><p>Creates high-quality presentations.</p></div>
+        <div class="card"><h2>Runway ML</h2><p>AI-based video and image editing.</p></div>
+        <div class="card"><h2>ChatGPT</h2><p>Assists in research and summarization.</p></div>
+        <div class="card"><h2>GitHub Copilot</h2><p>AI-assisted coding help.</p></div>
+        <div class="card"><h2>Final round AI</h2><p>AI-assisted to build resume</p></div>
+    </div>
+</div>
+
+<!-- Career Path Recommendations Carousel -->
+<h2>FAMOUS JOBS</h2>
+<div class="carousel-container">
+    <div class="career-carousel">
+        <div class="career-card"><h2>Data Entry Clerk</h2><p>Manage company data efficiently.</p></div>
+        <div class="career-card"><h2>Frontend Developer</h2><p>Build interactive UI with HTML, CSS, JS.</p></div>
+        <div class="career-card"><h2>Backend Developer</h2><p>Work with databases & APIs.</p></div>
+        <div class="career-card"><h2>Full Stack Developer</h2><p>Master both frontend and backend technologies.</p></div>
+        <div class="career-card"><h2>Software Tester</h2><p>Identify bugs & improve software quality.</p></div>
+    </div>
+</div>
+
+<main>
+    <div id="job-listings">
+        <div class="job-card" data-location="Bangalore, India">
+            <h2>Software Engineer</h2>
+            <p>Location: kerala, India</p>
+            <p>Experience: 2+ Years</p>
+            <button onclick="window.open('https://www.google.com/maps/place/Kerala/@10.5387122,73.4937065,7z/data=!3m1!4b1!4m6!3m5!1s0x3b0812ffd49cf55b:0x64bd90fbed387c99!8m2!3d10.1631526!4d76.6412712!16zL20vMGJ5aDhq?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D', '_blank')">view on map</button>
+        </div>
+        <div class="job-card" data-location="Chennai, India">
+            <h2>Data Analyst</h2>
+            <p>Location: Chennai, India</p>
+            <p>Experience: 1+ Years</p>
+            <button onclick="window.open('https://www.google.com/maps/place/Chennai,+Tamil+Nadu/@13.0475255,80.2086732,11z/data=!3m1!4b1!4m6!3m5!1s0x3a5265ea4f7d3361:0x6e61a70b6863d433!8m2!3d13.0843007!4d80.2704622!16zL20vMGM4dGs?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D', '_blank')">view on map</button>
+
+        </div>
+        <div class="job-card" data-location="Chennai, India">
+            <h2>Data Entry</h2>
+            <p>Location: Chennai, India</p>
+            <p>Experience: 1+ Years</p>
+            <button onclick="window.open('https://www.google.com/maps/place/Chennai,+Tamil+Nadu/@13.0475255,80.2086732,11z/data=!3m1!4b1!4m6!3m5!1s0x3a5265ea4f7d3361:0x6e61a70b6863d433!8m2!3d13.0843007!4d80.2704622!16zL20vMGM4dGs?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D', '_blank')">view on map</button>
+
+        </div>
+        <div class="job-card" data-location="Chennai, India">
+            <h2>Software Testing</h2>
+            <p>Location: Chennai, India</p>
+            <p>Experience: 1+ Years</p>
+            <button onclick="window.open('https://www.google.com/maps/place/Chennai,+Tamil+Nadu/@13.0475255,80.2086732,11z/data=!3m1!4b1!4m6!3m5!1s0x3a5265ea4f7d3361:0x6e61a70b6863d433!8m2!3d13.0843007!4d80.2704622!16zL20vMGM4dGs?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D', '_blank')">view on map</button>
+
+        </div>
+        
+
+        
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Job Seeker. All rights reserved.</p>
+</footer>
+
+<!-- Report Form -->
+<div id="report-area">
+    <h3>Report a Job Issue</h3>
+    <textarea id="report-description" placeholder="Describe the issue..."></textarea>
+    <button id="submit-report" onclick="submitReport()">Submit Report</button>
+    <button id="close-report" onclick="closeReportArea()">Close</button>
+</div>
+
+<script>
+    function openReportArea() {
+        document.getElementById("report-area").style.display = "block";
+    }
+
+    function closeReportArea() {
+        document.getElementById("report-area").style.display = "none";
+    }
+
+    function showRewards() {
+        alert("Earn points for reporting genuine job fraud cases!");
+    }
+
+    function openLoginForm() {
+        document.getElementById("login-form").style.display = "block";
+        document.getElementById("sign-up-form").style.display = "none";
+    }
+
+    function openSignUpForm() {
+        document.getElementById("sign-up-form").style.display = "block";
+        document.getElementById("login-form").style.display = "none";
+    }
+
+    function submitLogin() {
+        alert("Login submitted!");
+    }
+
+    function submitSignUp() {
+        alert("Sign Up submitted!");
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
